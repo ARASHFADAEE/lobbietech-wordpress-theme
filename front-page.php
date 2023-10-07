@@ -234,7 +234,7 @@
               <article class="entry card box-shadow hover-up">
                 <div class="entry__img-holder card__img-holder">
                   <a href="single-post.html">
-                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_1.jpg" class="entry__img" alt="">
+                    <?php the_post_thumbnail()?>
                   </a>
                   <div class="entry__date">
                     <span class="entry__date-day"><?php the_time('j')?></span>
@@ -247,11 +247,12 @@
                     <ul class="entry__meta">
                       <li class="entry__meta-category">
                         <i class="ui-category"></i>
-                        <a href="#"><?php the_category()?></a>
+                        <a href="#"><?php the_category(',')?></a>
                       </li>
                       <li class="entry__meta-comments">
                         <i class="ui-comments"></i>
-                        <a href="#">3 Comments</a>
+                        <a href="#"><?php echo get_comments_number($post->ID);
+?> Comments</a>
                       </li>
                     </ul>                     
                     <div class="entry__excerpt">
