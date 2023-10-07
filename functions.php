@@ -25,3 +25,17 @@ function run_setup(){
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme' , 'run_setup');
+
+
+
+//the_expert() expert custom for posts 
+
+function custom_excerpt_length($length) {
+    return 20; 
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+function custom_excerpt_more($more) {
+    return ' ...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
