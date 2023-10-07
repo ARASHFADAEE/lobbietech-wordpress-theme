@@ -226,6 +226,9 @@
             <p class="subtitle">Here are the best features that makes margin the most powerful, fast and user-friendly platform.</p>
           </div>
           <div class="row card-row">
+            <?php
+            if (have_posts()):
+              while(have_posts()):the_post();?>
 
             <div class="col-lg-4">
               <article class="entry card box-shadow hover-up">
@@ -234,17 +237,17 @@
                     <img src="<?php echo get_template_directory_uri()?>/img/blog/post_1.jpg" class="entry__img" alt="">
                   </a>
                   <div class="entry__date">
-                    <span class="entry__date-day">27</span>
-                    <span class="entry__date-month">aug</span>
+                    <span class="entry__date-day"><?php the_time('j')?></span>
+                    <span class="entry__date-month"><?php the_time('F')?></span>
                   </div>
                   <div class="entry__body card__body">                    
                     <h4 class="entry__title">
-                      <a href="single-post.html">Effective Marketing for Start-Ups</a>
+                      <a href="<?php the_permalink()?>"><?php the_title()?></a>
                     </h4>
                     <ul class="entry__meta">
                       <li class="entry__meta-category">
                         <i class="ui-category"></i>
-                        <a href="#">Marketing</a>
+                        <a href="#"><?php the_category()?></a>
                       </li>
                       <li class="entry__meta-comments">
                         <i class="ui-comments"></i>
@@ -252,77 +255,18 @@
                       </li>
                     </ul>                     
                     <div class="entry__excerpt">
-                      <p>Build a brand for your company using a specific color scheme and a professional logo designed with your business in mind.</p>
+                      <p><?php the_excerpt()?></p>
                     </div>
                   </div>
                 </div>
               </article>
             </div>
 
-            <div class="col-lg-4">
-              <article class="entry card box-shadow hover-up">
-                <div class="entry__img-holder card__img-holder">
-                  <a href="single-post.html">
-                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_2.jpg" class="entry__img" alt="">
-                  </a>
-                  <div class="entry__date">
-                    <span class="entry__date-day">23</span>
-                    <span class="entry__date-month">aug</span>
-                  </div>
-                  <div class="entry__body card__body">                    
-                    <h4 class="entry__title">
-                      <a href="single-post.html">Offer an Outrageous or Daily Deal</a>
-                    </h4>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-category">
-                        <i class="ui-category"></i>
-                        <a href="#">Marketing</a>
-                      </li>
-                      <li class="entry__meta-comments">
-                        <i class="ui-comments"></i>
-                        <a href="#">3 Comments</a>
-                      </li>
-                    </ul>                     
-                    <div class="entry__excerpt">
-                      <p>Build a brand for your company using a specific color scheme and a professional logo designed with your business in mind.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
+            <?php
+    endwhile;
+endif;
 
-            <div class="col-lg-4">
-              <article class="entry card box-shadow hover-up">
-                <div class="entry__img-holder card__img-holder">
-                  <a href="single-post.html">
-                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_3.jpg" class="entry__img" alt="">
-                  </a>
-                  <div class="entry__date">
-                    <span class="entry__date-day">21</span>
-                    <span class="entry__date-month">aug</span>
-                  </div>
-                  <div class="entry__body card__body">                    
-                    <h4 class="entry__title">
-                      <a href="single-post.html">Investigate your Competition</a>
-                    </h4>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-category">
-                        <i class="ui-category"></i>
-                        <a href="#">Marketing</a>
-                      </li>
-                      <li class="entry__meta-comments">
-                        <i class="ui-comments"></i>
-                        <a href="#">3 Comments</a>
-                      </li>
-                    </ul>                     
-                    <div class="entry__excerpt">
-                      <p>Build a brand for your company using a specific color scheme and a professional logo designed with your business in mind.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-
+?>
           </div>
         </div>
       </section> <!-- end from blog -->
