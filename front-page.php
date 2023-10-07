@@ -1,114 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Margin | Marketing HTML Template</title>
-
-  <meta charset="utf-8">
-  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="">
-  
-  <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700' rel='stylesheet'>
-
-  <!-- Css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/cookieconsent.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
-</head>
-
-<body>
-
-  <!-- Preloader -->
-  <div class="loader-mask">
-    <div class="loader">
-      "Loading..."
-    </div>
-  </div>
-
-  <main class="main-wrapper">
-
-    <!-- Navigation -->
-    <header class="nav">
-      <div class="nav__holder nav--sticky">
-        <div class="container-fluid container-semi-fluid nav__container">
-          <div class="flex-parent">
-
-            <div class="nav__header">
-              <!-- Logo -->
-              <a href="index.html" class="logo-container flex-child">
-                <img class="logo" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo">
-              </a>
-
-              <!-- Mobile toggle -->
-              <button type="button" class="nav__icon-toggle" id="nav__icon-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="nav__icon-toggle-bar"></span>
-                <span class="nav__icon-toggle-bar"></span>
-                <span class="nav__icon-toggle-bar"></span>
-              </button> 
-            </div>                      
-
-            <!-- Navbar -->
-            <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">
-              <ul class="nav__menu">
-                <li class="active">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="nav__dropdown">
-                  <a href="#">Pages</a>
-                  <i class="ui-arrow-down nav__dropdown-trigger"></i>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </li>
-                <li class="nav__dropdown">
-                  <a href="blog.html">Features</a>
-                  <i class="ui-arrow-down nav__dropdown-trigger"></i>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="icons.html">Icons</a></li>
-                    <li><a href="elements.html">Elements</a></li>
-                  </ul>
-                </li>
-                <li class="nav__dropdown">
-                  <a href="blog.html">Blog</a>
-                  <i class="ui-arrow-down nav__dropdown-trigger"></i>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="blog.html">Blog Posts</a></li>
-                    <li><a href="single-post.html">Single Post</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Purchase</a>
-                </li>
-              </ul> <!-- end menu -->
-            </nav> <!-- end nav-wrap -->
-
-            <div class="nav__btn-holder nav--align-right">
-              <a href="#" class="btn nav__btn">
-                <span class="nav__btn-text">Call us for Free</span>
-                <span class="nav__btn-phone">63-995-3959</span>
-              </a>
-            </div>     
-        
-          </div> <!-- end flex-parent -->
-        </div> <!-- end container -->
-
-      </div>
-    </header> <!-- end navigation -->
-
+<?php get_header()?>
     <!-- Triangle Image -->
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 600 480" style="enable-background:new 0 0 600 480;" xml:space="preserve" class="triangle-img triangle-img--align-right">
@@ -118,7 +8,7 @@
       </g>
       <defs>
         <pattern id="img1" patternUnits="userSpaceOnUse" width="500" height="500">
-          <image xlink:href="img/hero/hero.jpg" x="50" y="70" width="500" height="500"></image>
+          <image xlink:href="<?php echo get_template_directory_uri()?>/img/hero/hero.jpg" x="50" y="70" width="500" height="500"></image>
         </pattern>
 
         <linearGradient id="triangle-gradient" y2="100%" x2="0" y1="50%" gradientUnits="userSpaceOnUse" >
@@ -184,21 +74,21 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="feature box-shadow hover-up hover-line">
-                <svg class="feature__icon"><use xlink:href="img/icons/orion-svg-sprite.svg#medical-research-1"></use></svg>
+                <svg class="feature__icon"><use xlink:href="<?php echo get_template_directory_uri()?>/img/icons/orion-svg-sprite.svg#medical-research-1"></use></svg>
                 <h4 class="feature__title">Analytics and Research</h4>
                 <p class="feature__text">We also provide tangible results and measurable long-term value business.</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="feature box-shadow hover-up hover-line">
-                <svg class="feature__icon"><use xlink:href="img/icons/orion-svg-sprite.svg#edit-document-1"></use></svg>
+                <svg class="feature__icon"><use xlink:href="<?php echo get_template_directory_uri()?>/img/icons/orion-svg-sprite.svg#edit-document-1"></use></svg>
                 <h4 class="feature__title">Copywriting</h4>
                 <p class="feature__text">We also provide tangible results and measurable long-term value business.</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="feature box-shadow hover-up hover-line">
-                <svg class="feature__icon"><use xlink:href="img/icons/orion-svg-sprite.svg#currency-1"></use></svg>
+                <svg class="feature__icon"><use xlink:href="<?php echo get_template_directory_uri()?>/img/icons/orion-svg-sprite.svg#currency-1"></use></svg>
                 <h4 class="feature__title">Sales growth</h4>
                 <p class="feature__text">We also provide tangible results and measurable long-term value business.</p>
               </div>
@@ -218,7 +108,7 @@
           </g>
           <defs>
             <pattern id="img2" patternUnits="userSpaceOnUse" width="600" height="600">
-              <image xlink:href="img/promo/promo_img_1.jpg" width="600" height="600"></image>
+              <image xlink:href="<?php echo get_template_directory_uri()?>/img/promo/promo_img_1.jpg" width="600" height="600"></image>
             </pattern>
           </defs>    
         </svg>
@@ -251,7 +141,7 @@
               <div id="owl-testimonials" class="owl-carousel owl-theme owl-carousel--arrows-outside">
 
                 <div class="testimonial clearfix">
-                  <img src="img/testimonials/1.png" alt="" class="testimonial__img">
+                  <img src="<?php echo get_template_directory_uri()?>/img/testimonials/1.png" alt="" class="testimonial__img">
                   <div class="testimonial__info">
                     <span class="testimonial__author">Joeby Ragpa</span>
                     <span class="testimonial__company">DeoThemes</span>
@@ -269,7 +159,7 @@
                 </div>
 
                 <div class="testimonial clearfix">
-                  <img src="img/testimonials/2.png" alt="" class="testimonial__img">
+                  <img src="<?php echo get_template_directory_uri()?>/img/testimonials/2.png" alt="" class="testimonial__img">
                   <div class="testimonial__info">
                     <span class="testimonial__author">Alexander Samokhin</span>
                     <span class="testimonial__company">DeoThemes</span>
@@ -287,7 +177,7 @@
                 </div>
 
                 <div class="testimonial clearfix">
-                  <img src="img/testimonials/1.png" alt="" class="testimonial__img">
+                  <img src="<?php echo get_template_directory_uri()?>/img/testimonials/1.png" alt="" class="testimonial__img">
                   <div class="testimonial__info">
                     <span class="testimonial__author">Joeby Ragpa</span>
                     <span class="testimonial__company">DeoThemes</span>
@@ -305,7 +195,7 @@
                 </div>
 
                 <div class="testimonial clearfix">
-                  <img src="img/testimonials/2.png" alt="" class="testimonial__img">
+                  <img src="<?php echo get_template_directory_uri()?>/img/testimonials/2.png" alt="" class="testimonial__img">
                   <div class="testimonial__info">
                     <span class="testimonial__author">Alexander Samokhin</span>
                     <span class="testimonial__company">DeoThemes</span>
@@ -341,7 +231,7 @@
               <article class="entry card box-shadow hover-up">
                 <div class="entry__img-holder card__img-holder">
                   <a href="single-post.html">
-                    <img src="img/blog/post_1.jpg" class="entry__img" alt="">
+                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_1.jpg" class="entry__img" alt="">
                   </a>
                   <div class="entry__date">
                     <span class="entry__date-day">27</span>
@@ -373,7 +263,7 @@
               <article class="entry card box-shadow hover-up">
                 <div class="entry__img-holder card__img-holder">
                   <a href="single-post.html">
-                    <img src="img/blog/post_2.jpg" class="entry__img" alt="">
+                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_2.jpg" class="entry__img" alt="">
                   </a>
                   <div class="entry__date">
                     <span class="entry__date-day">23</span>
@@ -405,7 +295,7 @@
               <article class="entry card box-shadow hover-up">
                 <div class="entry__img-holder card__img-holder">
                   <a href="single-post.html">
-                    <img src="img/blog/post_3.jpg" class="entry__img" alt="">
+                    <img src="<?php echo get_template_directory_uri()?>/img/blog/post_3.jpg" class="entry__img" alt="">
                   </a>
                   <div class="entry__date">
                     <span class="entry__date-day">21</span>
@@ -438,7 +328,7 @@
       </section> <!-- end from blog -->
 
       <!-- Partners -->
-      <section class="section-wrap section-wrap--pb-large bg-gradient" style="background-image: url(img/partners/map.png);">
+      <section class="section-wrap section-wrap--pb-large bg-gradient" style="background-image: url(<?php echo get_template_directory_uri()?>/img/partners/map.png);">
         <div class="container">
           <div class="title-row title-row--boxed text-center">
             <h2 class="section-title">Join thousands of independent entrepreneurs who tried Margin</h2>
@@ -448,19 +338,19 @@
             <div class="col-lg-10">
               <div class="row pb-48">
                 <div class="col-md col-sm-6">
-                  <img src="img/partners/1.png" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/img/partners/1.png" alt="">
                 </div>
                 <div class="col-md col-sm-6">
-                  <img src="img/partners/2.png" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/img/partners/2.png" alt="">
                 </div>
                 <div class="col-md col-sm-6">
-                  <img src="img/partners/3.png" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/img/partners/3.png" alt="">
                 </div>
                 <div class="col-md col-sm-6">
-                  <img src="img/partners/4.png" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/img/partners/4.png" alt="">
                 </div>
                 <div class="col-md col-sm-6">
-                  <img src="img/partners/5.png" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/img/partners/5.png" alt="">
                 </div>
               </div>
             </div>
@@ -487,100 +377,9 @@
       </div> <!-- end cta -->      
 
       <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__widgets">
-            <div class="row">
+      <?php get_footer()?>
+ <!-- end footer -->
 
-              <div class="col-lg-3 col-md-6">
-                <div class="widget widget-about-us">
-                  <!-- Logo -->
-                  <a href="index.html" class="logo-container flex-child">
-                    <img class="logo" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo">
-                  </a>
-                  <p class="mt-24 mb-32">Tools to Effectively Build Your Brand and Grow Your Business.</p>
-                  <div class="socials">
-                    <a href="#" class="social social-twitter" aria-label="twitter" title="twitter" target="_blank"><i class="ui-twitter"></i></a>
-                    <a href="#" class="social social-facebook" aria-label="facebook" title="facebook" target="_blank"><i class="ui-facebook"></i></a>
-                    <a href="#" class="social social-google-plus" aria-label="google plus" title="google plus" target="_blank"><i class="ui-google"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end about us -->
-
-
-              <div class="col-lg-2 offset-lg-3 col-md-6">
-                <div class="widget widget_nav_menu">
-                  <h5 class="widget-title">Resources</h5>
-                  <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-lg-2 col-md-6">
-                <div class="widget widget_nav_menu">
-                  <h5 class="widget-title">Solutions</h5>
-                  <ul>                  
-                    <li><a href="#">Marketing Strategy</a></li>
-                    <li><a href="#">Advertising</a></li>
-                    <li><a href="#">SMM</a></li>
-                    <li><a href="#">SEO</a></li>
-                    <li><a href="#">Google AdWords</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-lg-2 col-md-6">
-                <div class="widget widget-address">
-                  <h5 class="widget-title">Company</h5>
-                  <ul>
-                    <li><address>8910 University Center Lane Suite 620 San Diego, CA 92102</address></li>
-                    <li>
-                      <span>Phone: </span>
-                      <a href="tel:+1-800-1554-456-123">+ 1 (800) 155 4561</a>
-                    </li>
-                    <li>
-                      <span>Email: </span>
-                      <a href="mailto:hi@margin.com">hi@margin.com</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>           
-
-            </div>
-          </div>    
-        </div> <!-- end container -->
-
-        <div class="footer__bottom top-divider">
-          <div class="container text-center">
-            <span class="copyright">
-              &copy; 2018 Margin, Made by <a href="https://deothemes.com">DeoThemes</a>
-            </span>
-          </div>
-        </div> <!-- end footer bottom -->
-      </footer> <!-- end footer -->
-
-      <div id="back-to-top">
-        <a href="#top"><i class="ui-arrow-up"></i></a>
-      </div>
-
-    </div> <!-- end content wrapper -->
-  </main> <!-- end main wrapper -->
-  
-
-  <!-- jQuery Scripts -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/scripts.js"></script>
-
-  <!-- Cookies -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-  <script src="js/cookies.js"></script>
     
 </body>
 </html>
