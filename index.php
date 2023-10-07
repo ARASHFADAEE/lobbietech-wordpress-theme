@@ -52,12 +52,15 @@
               </article>
             </div>
             <?php
+      
     endwhile;
 endif;
+?>  
 
-?>
 
-          </div>
+
+
+    </div>
           <?php
 $pagination_args = array(
     'prev_text' => '<i class="ui-arrow-left"></i>',

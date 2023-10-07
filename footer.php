@@ -7,7 +7,7 @@
                 <div class="widget widget-about-us">
                   <!-- Logo -->
                   <a href="index.html" class="logo-container flex-child">
-                    <img class="logo" src="<?php echo get_template_directory_uri()?>/img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo">
+                    <?php the_custom_logo()?>
                   </a>
                   <p class="mt-24 mb-32">Tools to Effectively Build Your Brand and Grow Your Business.</p>
                   <div class="socials">
