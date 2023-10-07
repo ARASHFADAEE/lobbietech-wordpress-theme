@@ -27,8 +27,8 @@
                     <?php the_post_thumbnail()?>
                   </a>
                   <div class="entry__date">
-                    <span class="entry__date-day">27</span>
-                    <span class="entry__date-month">aug</span>
+                    <span class="entry__date-day"><?php the_time('j')?></span>
+                    <span class="entry__date-month"><?php the_time('F')?></span>
                   </div>
                   <div class="entry__body card__body">                    
                     <h4 class="entry__title">
@@ -41,7 +41,7 @@
                       </li>
                       <li class="entry__meta-comments">
                         <i class="ui-comments"></i>
-                        <a href="#"><?php get_comments_number( $post->ID )?> Comments</a>
+                        <a href="#"><?php echo get_comments_number( $post->ID )?> Comments</a>
                       </li>
                     </ul>                     
                     <div class="entry__excerpt">
@@ -72,13 +72,13 @@ if ($pagination_links) {
     echo '</nav>';
 }
 ?>          <!-- Pagination -->
-          <nav class="pagination">
+          <!-- <nav class="pagination">
             <span class="pagination__page pagination__page--current">1</span>
             <a href="#" class="pagination__page">2</a>
             <a href="#" class="pagination__page">3</a>
             <a href="#" class="pagination__page">4</a>
             <a href="#" class="pagination__page pagination__icon pagination__page--next"><i class="ui-arrow-right"></i></a>
-          </nav>
+          </nav> -->
 
         </div>
       </section> <!-- end blog -->

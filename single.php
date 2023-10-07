@@ -13,7 +13,7 @@
             <h1 class="page-title__title"><?php the_title();?></h1>
             <ul class="entry__meta">
               <li class="entry__meta-author">
-                <a href="<?php the_author_link()?>" class="entry__meta-author-url">
+                <a href="" class="entry__meta-author-url">
                   <img src="<?php get_template_directory_uri();?>/img/onwer/imgpostbloh.png" class="entry__meta-author-img" alt="">
                   <span><?php the_author();?></span>
                 </a>
@@ -131,31 +131,7 @@
 
 
 
-                <!-- Prev / Next Post -->
-                <nav class="entry-navigation">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <a href="single-post.html" class="entry-navigation__url entry-navigation--left">
-                        <img src="img/blog/prev_post.jpg" alt="" class="entry-navigation__img">
-                        <div class="entry-navigation__body">
-                          <i class="ui-arrow-left"></i>
-                          <span class="entry-navigation__label">Previous Post</span>
-                          <h6 class="entry-navigation__title">How to design your first mobile app</h6>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-6">
-                      <a href="single-post.html" class="entry-navigation__url entry-navigation--right">
-                        <div class="entry-navigation__body">
-                          <span class="entry-navigation__label">Next Post</span>
-                          <i class="ui-arrow-right"></i>
-                          <h6 class="entry-navigation__title">How to design your first mobile app</h6>
-                        </div>
-                        <img src="img/blog/next_post.jpg" alt="" class="entry-navigation__img">
-                      </a>
-                    </div>
-                  </div>                  
-                </nav> 
+
 
               </div>
             </div>
