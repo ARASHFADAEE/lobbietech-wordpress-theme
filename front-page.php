@@ -227,8 +227,15 @@
           </div>
           <div class="row card-row">
             <?php
-            if (have_posts()):
-              while(have_posts()):the_post();?>
+            $arr=array(
+              'post_type'=>'post',
+              'posts_per_page'=> 3,
+
+            );
+
+            $query= new WP_Query($arr);
+            if ($query->have_posts()):
+              while($query->have_posts()):$query->the_post();?>
 
             <div class="col-lg-4">
               <article class="entry card box-shadow hover-up">
@@ -271,7 +278,6 @@ endif;
           </div>
         </div>
       </section> <!-- end from blog -->
-
       <!-- Partners -->
       <section class="section-wrap section-wrap--pb-large bg-gradient" style="background-image: url(<?php echo get_template_directory_uri()?>/img/partners/map.png);">
         <div class="container">
