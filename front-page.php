@@ -233,7 +233,7 @@
             <div class="col-lg-4">
               <article class="entry card box-shadow hover-up">
                 <div class="entry__img-holder card__img-holder">
-                  <a href="single-post.html">
+                  <a href="<?php the_permalink()?>">
                     <?php the_post_thumbnail()?>
                   </a>
                   <div class="entry__date">
