@@ -14,7 +14,6 @@
             <ul class="entry__meta">
               <li class="entry__meta-author">
                 <a href="" class="entry__meta-author-url">
-                  <img src="<?php get_template_directory_uri();?>/img/onwer/imgpostbloh.png" class="entry__meta-author-img" alt="">
                   <span><?php the_author_posts_link();?></span>
                 </a>
               </li>
