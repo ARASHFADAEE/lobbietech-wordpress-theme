@@ -15,7 +15,7 @@
               <li class="entry__meta-author">
                 <a href="" class="entry__meta-author-url">
                   <img src="<?php get_template_directory_uri();?>/img/onwer/imgpostbloh.png" class="entry__meta-author-img" alt="">
-                  <span><?php the_author();?></span>
+                  <span><?php the_author_posts_link();?></span>
                 </a>
               </li>
               <li class="entry__meta-date">
@@ -39,10 +39,10 @@
                     <div class="entry__share">
                       <div class="sticky-col">
                         <div class="socials socials--rounded socials--large">
-                          <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
+                          <a class="social social-facebook" href="https://www.facebook.com/sharer.php?u=<?php the_permalink($post->ID)?>" title="facebook" target="_blank" aria-label="facebook">
                             <i class="ui-facebook"></i>
                           </a>
-                          <a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
+                          <a class="social social-twitter" href="https://twitter.com/intent/tweet?text=<?php the_excerpt() ?>&url=<?php the_permalink($post->ID)?>" title="twitter" target="_blank" aria-label="twitter">
                             <i class="ui-twitter"></i>
                           </a>
                           <a class="social social-google-plus" href="#" title="google" target="_blank" aria-label="google">
@@ -82,48 +82,38 @@
                 <section class="related-posts">
                   <h5 class="mb-24">You might also like</h5>
                   <div class="row row-16 card-row">
+                    <?php 
+                    $related= get_posts( array(
+                      'category__id'=> wp_get_post_categories($post->ID),
+                      'numberposts'=> 3,
+                      'post__not_in'=> array($post->ID),
+
+                    ) );
+
+                    if($related) foreach($related as $post){
+                      setup_postdata( $post );?>
+                  
                     <div class="col-lg-4">
                       <article class="entry card card--small box-shadow hover-up">
                         <div class="entry__img-holder card__img-holder">
-                          <a href="single-post.html">
-                            <img src="img/blog/post_4.jpg" class="entry__img" alt="">
+                          <a href="<?php the_permalink()?>">
+                          <?php the_post_thumbnail()?>
                           </a>
                           <div class="entry__body card__body">
                             <h4 class="entry__title">
-                              <a href="single-post.html">Using Technology to Maximize Efficiency</a>
+                              <a href="<?php the_permalink()?>"><?php the_title() ?></a>
                             </h4>
                           </div>
                         </div>
                       </article>
                     </div>
-                    <div class="col-lg-4">
-                      <article class="entry card card--small box-shadow hover-up">
-                        <div class="entry__img-holder card__img-holder">
-                          <a href="single-post.html">
-                            <img src="img/blog/post_5.jpg" class="entry__img" alt="">
-                          </a>
-                          <div class="entry__body card__body">
-                            <h4 class="entry__title">
-                              <a href="single-post.html">Offer an Outrageous or Daily Deal</a>
-                            </h4>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="col-lg-4">
-                      <article class="entry card card--small box-shadow hover-up">
-                        <div class="entry__img-holder card__img-holder">
-                          <a href="single-post.html">
-                            <img src="img/blog/post_6.jpg" class="entry__img" alt="">
-                          </a>
-                          <div class="entry__body card__body">
-                            <h4 class="entry__title">
-                              <a href="single-post.html">Investigate your Competition</a>
-                            </h4>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
+
+                    <?php 
+                    }
+                    wp_reset_postdata();
+                    
+                    ?>
+
                   </div>
                 </section>
                 
