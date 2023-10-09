@@ -8,10 +8,9 @@
   <meta name="description" content="">
   
   <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700' rel='stylesheet'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700' rel='stylesheet'> -->
 
   <!-- Css -->
-  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" /> -->
 
 <?php wp_head()?>
 </head>
